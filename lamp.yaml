@@ -1,0 +1,17 @@
+#cloud-config
+
+# Automatically update all of the packages
+package_upgrade: true
+package_reboot_if_required: true
+
+# Install the LAMP stack for me
+packages:
+  - apache2
+  - mysql-server
+  - libapache2-mod-php5
+  - php5-mysql
+
+# Replace index.html with index.php
+runcmd:
+  - "echo '<?php phpinfo();' > /var/www/index.php"
+  - "rm /var/www/index.html"
