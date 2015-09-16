@@ -13,5 +13,6 @@ packages:
 
 # Replace index.html with index.php
 runcmd:
-  - "echo '<?php phpinfo();' > /var/www/index.php"
+  - "echo '<?php echo "webserver running well ' > /var/www/index.php"
   - "rm /var/www/index.html"
+  - "sed -i 's_DocumentRoot /var/www/html_DocumentRoot /var/www_' /etc/apache2/sites-enabled/000-default.conf"
