@@ -4,7 +4,8 @@ packages:
   - unzip
 
 runcmd:
-  - wget scapy.net -P /tmp -O scapy-latest.zip
+  - cd /tmp
+  - wget scapy.net -O scapy-latest.zip
   - unzip /tmp/scapy-latest.zip -d /opt/
   - cd /opt/scapy-2.*
   - sudo python setup.py install
