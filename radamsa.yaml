@@ -1,9 +1,5 @@
 #cloud-config
 
-#update/upgrade
-package_update: false
-package_upgrade: false
-
 #install package
 packages:
   - make
