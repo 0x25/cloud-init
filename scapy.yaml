@@ -1,0 +1,10 @@
+#cloud-config
+
+packages:
+  - unzip
+
+runcmd:
+  - wget scapy.net -P /tmp
+  - unzip /tmp/scapy-latest.zip -d /opt/
+  - cd /opt/scapy-2.*
+  - sudo python setup.py install
