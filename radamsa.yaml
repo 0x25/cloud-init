@@ -1,0 +1,18 @@
+#cloud-config
+
+#update/upgrade
+package_update: false
+package_upgrade: false
+
+#install package
+packages:
+  - make
+  - gcc
+  - wget  
+
+runcmd:
+  - wget https://ouspg.googlecode.com/files/radamsa-0.3.tar.gz -P /tmp/
+  - sudo tar -zxvf /tmp/radamsa-0.3.tar.gz -C /opt/
+  - cd /opt/radamsa-0.3
+  - make
+  - make install
