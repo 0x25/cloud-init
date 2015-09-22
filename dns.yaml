@@ -1,0 +1,14 @@
+#cloud-config
+
+package_update: true
+package_upgrade: true
+
+packages:
+  - bind9
+  - dnsutils
+  - tcpdump
+  - curl
+  - wget
+
+runcmd:
+  - sudo service bind9 restart
