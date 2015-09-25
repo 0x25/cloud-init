@@ -1,0 +1,7 @@
+#cloud-config
+
+package_update: True
+package_upgrade: True
+
+packages:
+  - net-snmp
