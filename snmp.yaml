@@ -4,7 +4,7 @@ package_update: True
 package_upgrade: True
 
 packages:
-  - net-snmp
+  - snmpd
 
 runcmd:
   - chkconfig snmpd on
