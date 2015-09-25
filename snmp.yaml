@@ -5,3 +5,8 @@ package_upgrade: True
 
 packages:
   - net-snmp
+
+runcmd:
+  - chkconfig snmpd on
+  - /etc/init.d/snmpd restart
+
