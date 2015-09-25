@@ -1,5 +1,5 @@
 #cloud-config
-
+# edit /etc/snmp/snmpd.conf change 127.0.0.1 => 0.0.0.0
 package_update: True
 package_upgrade: True
 
