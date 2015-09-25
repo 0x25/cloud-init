@@ -7,6 +7,5 @@ packages:
   - snmpd
 
 runcmd:
-  - chkconfig snmpd on
-  - /etc/init.d/snmpd restart
+  - /etc/init.d/snmpd status
 
