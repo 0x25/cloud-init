@@ -46,6 +46,17 @@ class BotModeration(ircbot.SingleServerIRCBot):
                 res = base64.b64encode(eicar)
                 serv.privmsg(canal,res)
 
+        if '!link' in message:
+                res = "http://securite-informatique.info/virus/eicar/download/e$
+                serv.privmsg(canal,res)
+
+        if '!bin' in message:
+                res = "http://securite-informatique.info/virus/eicar/download/e$
+                ser.privmsg(canal,res)
+
+        if '!help' in message:
+                res = "!b64 !eicar !link !bin"
+                serv.privmsg(canal,res)
 
 if __name__ == "__main__":
     BotModeration().start()
